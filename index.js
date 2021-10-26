@@ -16,12 +16,15 @@ const chooseStyleContent = (content) => {
   return `<p style=${style}>${content.slice(1, content.length - 1)}</p>`;
 };
 
+const changeImage = (src) => getEl('#image > img').setAttribute('src', src);
+
 const startGame = () => {
   getEl('#start').classList.add('hideOption');
   getEl('#next').classList.remove('hideOption');
   getEl('#quiz__content').innerHTML = chooseStyleContent(
-    cutScene[listQuestion[0].cutScene].content[0]
+    cutScene[listQuestion[0].cutScene].content[0].text
   );
+  changeImage(cutScene[listQuestion[0].cutScene].content[0].img);
 };
 
 const nextAction = () => {
@@ -39,6 +42,7 @@ const nextAction = () => {
         '<p style="color: #21839a;">' +
         listQuestion[cutScene[indexScene].idQuestion].content +
         '</p>';
+      changeImage(listQuestion[cutScene[indexScene].idQuestion].img);
 
       getEl('#quiz__option1').classList.remove('hideOption');
       getEl('#quiz__option2').classList.remove('hideOption');
@@ -47,18 +51,13 @@ const nextAction = () => {
     }, 500);
   } else {
     getEl('#quiz__content').innerHTML = chooseStyleContent(
-      cutScene[indexScene].content[currentScene + 1]
+      cutScene[indexScene].content[currentScene + 1].text
     );
+    changeImage(cutScene[indexScene].content[currentScene + 1].img);
     getEl('#quiz').setAttribute('current-scene', currentScene + 1);
   }
 };
 
-const handleOption1 = () => {
-  changeQuestion(1);
-};
-const handleOption2 = () => {
-  changeQuestion(2);
-};
 const changeQuestion = (optionNumber) => {
   getEl('#quiz').classList.add('hideQuiz');
 
@@ -67,7 +66,8 @@ const changeQuestion = (optionNumber) => {
     const nextCutScene = listQuestion[indexQuestion][`option${optionNumber}`];
 
     getEl('#quiz').setAttribute('id-scene', nextCutScene);
-    getEl('#quiz__content').innerHTML = chooseStyleContent(cutScene[nextCutScene].content[0]);
+    getEl('#quiz__content').innerHTML = chooseStyleContent(cutScene[nextCutScene].content[0].text);
+    changeImage(cutScene[nextCutScene].content[0].img);
 
     getEl('#quiz').classList.remove('hideQuiz');
     getEl('#quiz__option1').classList.add('hideOption');
@@ -78,5 +78,5 @@ const changeQuestion = (optionNumber) => {
 
 getEl('#start').onclick = startGame;
 getEl('#next').onclick = nextAction;
-getEl('#quiz__option1').onclick = handleOption1;
-getEl('#quiz__option2').onclick = handleOption2;
+getEl('#quiz__option1').onclick = () => changeQuestion(1);
+getEl('#quiz__option2').onclick = () => changeQuestion(2);

@@ -1,49 +1,144 @@
 const cutScene = [
   {
     content: [
-      '-Ring...ring...ring!!!-',
-      '*Bẹp!!!*',
-      '"Cái báo thức đáng ghét, sáng nào cũng đập mà nó vẫn chạy tốt nhỉ?"',
-      '"Bây giờ là 7h15 sáng, ...hừm, đành dậy vậy!"',
-      '*Bước tới nhà vệ sinh*',
-      '"Mình lười đánh răng quá, dù gì thì ăn sáng xong mùi hôi miệng nó cũng sẽ bị lấn át bởi đồ ăn mà."',
+      {
+        text: '-Ring...ring...ring!!!-',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Bẹp!!!*',
+        img: './image/scene2.png',
+      },
+      {
+        text: '"Cái báo thức đáng ghét, sáng nào cũng đập mà nó vẫn chạy tốt nhỉ?"',
+        img: './image/scene3.png',
+      },
+      {
+        text: '"Bây giờ là 7h15 sáng, ...hừm, đành dậy vậy!"',
+        img: './image/scene4.png',
+      },
+      {
+        text: '*Bước tới nhà vệ sinh*',
+        img: './image/scene5.png',
+      },
+      {
+        text: '"Mình lười đánh răng quá, dù gì thì ăn sáng xong mùi hôi miệng nó cũng sẽ bị lấn át bởi đồ ăn mà."',
+        img: './image/scene6.png',
+      },
     ],
     idQuestion: 0,
   },
   {
     content: [
-      '-Xoạt...xoạt...xoạt!-',
-      '"Mình ghét điều này!"',
-      '*Đánh răng xong thì tôi xuống bếp để ăn sáng*',
-      '"Mẹ ơi, tô bún này của con phải ko?"',
-      '"[<i>Mẹ</i>] Con ăn tô có cục giò và 2 lát thịt ấy!"',
-      '"Dạ!"',
-      '*Ăn xong thì tôi lên con xe máy chị để lại để tới trường*',
-      '*Vừa đi vào lớp, thì tôi va phải My đang hớt hải chạy ra*',
-      '"[<i>My(Crush của tôi)</i>] Ái! Hôm nay ông lên lớp trễ thế, lát nữa có thuyết trình đấy!"',
-      '"Thuyết trình??? thuyết trình cái gì"',
-      '*Tôi hoảng hốt vcl ra, theo trí nhớ của tôi thì tuần này làm quái gì thuyết trình*',
-      '"[<i>My</i>] Mà ông tới cũng đúng lúc lắm, đi in báo cáo thuyết trình với tui, tui để quên ví ngoài xe rồi."',
+      {
+        text: '-Xoạt...xoạt...xoạt!-',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Mình ghét điều này!"',
+        img: './image/scene2.png',
+      },
+      {
+        text: '*Đánh răng xong thì tôi xuống bếp để ăn sáng*',
+        img: './image/scene3.png',
+      },
+      {
+        text: '"Mẹ ơi, tô bún này của con phải ko?"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>Mẹ</i>] Con ăn tô có cục giò và 2 lát thịt ấy!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Dạ!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Ăn xong thì tôi lên con xe máy chị để lại để tới trường*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Vừa đi vào lớp, thì tôi va phải My đang hớt hải chạy ra*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>My(Crush của tôi)</i>] Ái! Hôm nay ông lên lớp trễ thế, lát nữa có thuyết trình đấy!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Thuyết trình??? thuyết trình cái gì"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Tôi hoảng hốt vcl ra, theo trí nhớ của tôi thì tuần này làm quái gì thuyết trình*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>My</i>] Mà ông tới cũng đúng lúc lắm, đi in báo cáo thuyết trình với tui, tui để quên ví ngoài xe rồi."',
+        img: './image/scene1.png',
+      },
     ],
     idQuestion: 1,
   },
   {
     content: [
-      '*Đi xuống bếp để ăn sáng*',
-      '"Mẹ ơi, tô bún này của con phải ko?"',
-      '"[<i>Mẹ</i>] Con ăn tô có cục giò và 2 lát thịt ấy!"',
-      '"Dạ!"',
-      '*Hít mũi*',
-      '"Có mùi gì đó hơi kì nhỉ?"',
-      '*Ăn xong thì tôi lên con xe máy chị để lại để tới trường.*',
-      '*Vừa đi vào lớp, thì tôi va phải My đang hớt hải chạy ra.*',
-      '"[<i>My(Crush của tôi)</i>] Ái! Hôm nay ông lên lớp trễ thế, lát nữa có thuyết trình đấy!"',
-      '"Thuyết trình??? thuyết trình cái gì"',
-      '*Tôi hoảng hốt vcl ra, theo trí nhớ của tôi thì tuần này làm quái gì thuyết trình*',
-      '*My hơi khịt khịt mũi, lấy tay phẩy phẩy nhẹ trước mũi*',
-      '"[<i>My</i>] Thuyết trình môn Quản lý dự án, tối qua thầy báo sáng nay lớp sẽ thuyết trình sớm, ông không lên page lớp à?"',
-      '*My hơi nhăn mặt*',
-      '"[<i>My</i>] Thôi tôi đi in báo cáo thuyết trình đã"',
+      {
+        text: '*Đi xuống bếp để ăn sáng*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Mẹ ơi, tô bún này của con phải ko?"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>Mẹ</i>] Con ăn tô có cục giò và 2 lát thịt ấy!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Dạ!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Có mùi gì đó hơi kì nhỉ?"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Ăn xong thì tôi lên con xe máy chị để lại để tới trường.*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Vừa đi vào lớp, thì tôi va phải My đang hớt hải chạy ra.*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>My(Crush của tôi)</i>] Ái! Hôm nay ông lên lớp trễ thế, lát nữa có thuyết trình đấy!"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"Thuyết trình??? thuyết trình cái gì"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*Tôi hoảng hốt vcl ra, theo trí nhớ của tôi thì tuần này làm quái gì thuyết trình*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*My hơi khịt khịt mũi, lấy tay phẩy phẩy nhẹ trước mũi*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>My</i>] Thuyết trình môn Quản lý dự án, tối qua thầy báo sáng nay lớp sẽ thuyết trình sớm, ông không lên page lớp à?"',
+        img: './image/scene1.png',
+      },
+      {
+        text: '*My hơi nhăn mặt*',
+        img: './image/scene1.png',
+      },
+      {
+        text: '"[<i>My</i>] Thôi tôi đi in báo cáo thuyết trình đã"',
+        img: './image/scene1.png',
+      },
     ],
     idQuestion: 2,
   },
